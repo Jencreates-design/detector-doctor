@@ -1,0 +1,368 @@
+/* ------------------------------
+   GLOBAL STYLES
+------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #ffffff;
+    color: #0A1A2F;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    color: #0A1A2F;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn {
+    display: inline-block;
+    background: #D62828;
+    color: #ffffff;
+    padding: 12px 22px;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #b51f1f;
+}
+
+/* ------------------------------
+   NAVIGATION (STICKY)
+------------------------------ */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #0A1A2F;
+    padding: 12px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: auto;
+    /* Bigger banner-style logo */
+    max-width: 350px;
+    /* Prevents overflow */
+    object-fit: contain;
+    /* Keeps proportions clean */
+}
+
+.logo-box {
+    background: #ffffff;
+    padding: 1px 60px;
+    height: 200px;
+    width: 1000px;
+    /* smaller padding */
+    border-radius: 4px;
+    /* softer corners */
+    display: inline-block;
+}
+
+.navbar nav a {
+    color: #ffffff;
+    margin-left: 25px;
+    font-weight: 500;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    border-bottom: 2px solid #D62828;
+}
+
+/* ------------------------------
+   HERO SECTION
+------------------------------ */
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+}
+
+.hero-img {
+    width: 100%;
+    height: 420px;
+    /* Taller hero for better visibility */
+    object-fit: cover;
+    /* Cinematic look */
+    filter: brightness(55%);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 90%;
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.hero-text h1,
+.hero-text p {
+    color: #ffffff;
+    /* makes hero text white */
+}
+
+/* ------------------------------
+   WHY CHOOSE US
+------------------------------ */
+
+.why {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.why ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.why li {
+    margin: 8px 0;
+    font-size: 1.1rem;
+}
+
+/* ------------------------------
+   SERVICES PREVIEW
+------------------------------ */
+
+.services-preview {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* ------------------------------
+   ABOUT PAGE
+------------------------------ */
+
+.about {
+    display: flex;
+    align-items: center;
+    padding: 50px 30px;
+    gap: 40px;
+}
+
+.about-img {
+    width: 45%;
+    border-radius: 8px;
+}
+
+.about-text {
+    width: 55%;
+}
+
+/* ------------------------------
+   SERVICES PAGE HEADER
+------------------------------ */
+
+.services-header {
+    position: relative;
+    text-align: center;
+}
+
+.services-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+.services-header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 2.5rem;
+}
+
+/* ------------------------------
+   SERVICE CARDS GRID
+------------------------------ */
+
+.services-grid {
+    padding: 50px 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: #ffffff;
+    border: 2px solid #0A1A2F;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    border-color: #D62828;
+    transform: translateY(-5px);
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background: #0A1A2F;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 2rem;
+}
+
+/* ------------------------------
+   CONTACT PAGE
+------------------------------ */
+
+.contact {
+    display: flex;
+    padding: 50px 30px;
+    gap: 40px;
+}
+
+.contact-left {
+    width: 50%;
+}
+
+.contact-right {
+    width: 50%;
+}
+
+.contact-img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+    padding: 10px;
+    border: 1px solid #0A1A2F;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+
+footer {
+    background: #0A1A2F;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Sticky nav shadow */
+.navbar.scrolled {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* ------------------------------
+   RESPONSIVE DESIGN
+------------------------------ */
+
+/* Tablets */
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-img,
+    .about-text {
+        width: 100%;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 100%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-img {
+        height: 350px;
+        /* NEW */
+    }
+
+    .hero-text h1 {
+        font-size: 1.9rem;
+        /* UPDATED */
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        /* NEW */
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar nav a {
+        margin: 10px;
+    }
+}

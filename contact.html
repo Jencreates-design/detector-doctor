@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us | Detector Doctor</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo-box">
+            <img src="assets/logo.png" class="logo" alt="Detector Doctor Logo">
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+    <section class="contact">
+        <div class="contact-left">
+            <h1>Contact Us</h1>
+            <p>Email: info@detectordoctor.com.au</p>
+            <p>Service Area: NSW, Australia</p>
+
+            <form action="https://formspree.io/f/xzdqaeqn" method="POST">
+
+                <label>Type of Inquiry</label>
+                <select name="inquiry_type" id="inquiry_type" required>
+                    <option value="General Enquiry">General Enquiry</option>
+                    <option value="Quote Request">Quote Request</option>
+                    <option value="Service Request">Service Request</option>
+                    <option value="Submit Feedback">Submit Feedback</option>
+                    <option value="Leave a Review">Leave a Review</option>
+                    <option value="Submit a Complaint">Submit a Complaint</option>
+                </select>
+
+                <input type="hidden" name="_subject" id="subjectField">
+
+                <label>Your Name</label>
+                <input type="text" name="name" required>
+
+                <label>Contact Number</label>
+                <input type="tel" name="phone" required>
+
+                <label>Email</label>
+                <input type="email" name="email" required>
+
+                <label>Suburb</label>
+                <input type="text" name="suburb">
+
+                <label>Notes</label>
+                <textarea name="notes" rows="5" required></textarea>
+
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+
+        <div class="contact-right">
+            <img src="assets/photo4.png" alt="Contact" class="contact-img">
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Detector Doctor. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
